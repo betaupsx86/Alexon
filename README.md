@@ -19,7 +19,7 @@ Git clone these layers into your workspace and checkout the dizzy branch which i
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
 
-#WHITELISTED
+ #WHITELISTED
 LICENSE_FLAGS_WHITELIST = "commercial_libav commercial_mpeg2dec commercial_x264"
 
 Lastly we need to edit the VLC recipe so it compiles with the correct configuration. We need to enable or disable libva and avcodec separately. We don't have video acceleration hardware on the Edison so libva is useless. Modify vlc.inc as follows:
